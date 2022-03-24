@@ -1,0 +1,20 @@
+#RewriteEngine On
+#RewriteBase /
+
+#RewriteCond %{THE_REQUEST} public/([^\s?]*) [NC]
+#RewriteRule ^ %1 [L,NE,R=302]
+#RewriteRule ^((?!public/).*)$ mini-framework-php/public/$1 [L,NC]
+
+ RewriteEngine On
+    #aqui criamos uma condição para que os arquivos sejam ignorados nas regras abaixo
+    RewriteCond %{REQUEST_FILENAME} !-f
+  #aqui criamos uma condição para que diretórios sejam ignorados nas regras abaixo
+    RewriteCond %{REQUEST_FILENAME} !-d
+    #aqui definimos onde começa a base das regras
+    #vamos supor que fosse um subdiretório, como por exemplo: /vs1/
+    RewriteBase /
+    #aqui ignoramos o uso de barra no final
+    RewriteRule ^(.+)\/?$ $1 [R,L]
+
+    #fix rules 
+    RewriteRule ^((?!public/).*)$ /public/$1 [L,NC]

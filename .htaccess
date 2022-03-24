@@ -1,6 +1,19 @@
+#LOCALHOST
+#===================
 RewriteEngine On
 RewriteBase /
 
 RewriteCond %{THE_REQUEST} public/([^\s?]*) [NC]
 RewriteRule ^ %1 [L,NE,R=302]
 RewriteRule ^((?!public/).*)$ mini-framework-php/public/$1 [L,NC]
+
+
+#FELIX E FELIX
+#===================
+#RewriteEngine On
+#RewriteCond %{REQUEST_FILENAME} !-f
+#RewriteCond %{REQUEST_FILENAME} !-d
+#RewriteBase /
+#RewriteRule ^(.+)\/?$ $1 [R,L]
+
+#RewriteRule ^((?!public/).*)$ /public/$1 [L,NC]

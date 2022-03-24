@@ -4,9 +4,8 @@ namespace app\controller;
 
 class TesteController
 {
-	
-	public function __construct()
+	public function seta()
 	{
-		echo "Estamos aqui 2";
+		return ['nome' => 'Eliel'];
 	}
 }
