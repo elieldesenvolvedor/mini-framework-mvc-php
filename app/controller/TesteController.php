@@ -7,6 +7,6 @@ class TesteController
 	
 	public function __construct()
 	{
-		echo "Estamos aqui";
+		echo "Estamos aqui 2";
 	}
 }
