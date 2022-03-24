@@ -1,0 +1,15 @@
+{
+    "name": "elielduarte/mini-framework-php",
+    "authors": [
+        {
+            "name": "Eliel Duarte",
+            "email": "eliel.desenvolvedor@gmail.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "app\\": "app/"
+        }
+    }
+}
